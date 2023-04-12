@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Matrizes </title>
+</head>
+<body>
+    <button onclick="Executar();">
+        EXECUTAR
+    </button>
+    <div id="resposta"> --- </div>
+</body>
+<Script>
+    // class é para o css//
+    // id é para o java script//
+    function Executar()
+    {
+        matriz_A = [ 
+                    [10,9,6],
+                    [ 3,1,0],
+                    [4,7,20]
+                   ]
+        maior = matriz_A [0][0]
+        soma = 0
+        contador = 0
+        for(linha=0;linha<=2;linha++)
+        {
+            for(coluna=0;coluna<=2;coluna++)
+            {
+                soma = soma + matriz_A[linha][coluna]
+                contador = contador + 1
+                if (maior < matriz_A[linha][coluna])
+                {
+                    maior = matriz_A[linha][coluna]
+                }
+            }
+        }
+        resposta.innerHTML = soma/9
+    }
+</Script>
+</html>
